@@ -90,9 +90,11 @@ export default function Home() {
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="relative">
-            <img
+            <Image
               src="/img/about-us.webp"
               alt="Cricket stadium"
+              width={608}
+              height={331}
               className="w-full rounded-lg shadow-lg"
             />
             {/* <button className="absolute inset-0 flex items-center justify-center">

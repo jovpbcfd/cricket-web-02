@@ -1,47 +1,47 @@
 import Image from "next/image";
 
 export default function Page() {
-    const newsData = [
-        {
-            id: 1,
-            title: "Суд Европейской отключил иск к «Северного потока» по газовым нормам",
-            description:
-                "Европейский суд отклонил иск Nord Stream AG о недействительности Газовой директивы ЕС...",
-            image: "/img/news/news-post-1.webp",
-            category: "Политика",
-            featured: true,
-        },
-        {
-            id: 2,
-            title: "Рынок ВДНХ сокращает объёмы производства",
-            image: "/img/news/news-post-2.webp",
-            category: "Экономика",
-        },
-        {
-            id: 3,
-            title: "Границу Венгрии и Словакии частично закрывают",
-            image: "/img/news/news-post-3.webp",
-            category: "Общество",
-        },
-        {
-            id: 4,
-            title: "Украина подала Крыму новые предложения",
-            image: "/img/news/news-post-4.webp",
-            category: "Политика",
-        },
-        {
-            id: 5,
-            title: "Title",
-            image: "/img/news/news-post-5.webp",
-            category: "Наука",
-        },
-        {
-            id: 6,
-            title: "Title",
-            image: "/img/news/news-post-6.webp",
-            category: "Общество",
-        },
-    ];
+    // const newsData = [
+    //     {
+    //         id: 1,
+    //         title: "Суд Европейской отключил иск к «Северного потока» по газовым нормам",
+    //         description:
+    //             "Европейский суд отклонил иск Nord Stream AG о недействительности Газовой директивы ЕС...",
+    //         image: "/img/news/news-post-1.webp",
+    //         category: "Политика",
+    //         featured: true,
+    //     },
+    //     {
+    //         id: 2,
+    //         title: "Рынок ВДНХ сокращает объёмы производства",
+    //         image: "/img/news/news-post-2.webp",
+    //         category: "Экономика",
+    //     },
+    //     {
+    //         id: 3,
+    //         title: "Границу Венгрии и Словакии частично закрывают",
+    //         image: "/img/news/news-post-3.webp",
+    //         category: "Общество",
+    //     },
+    //     {
+    //         id: 4,
+    //         title: "Украина подала Крыму новые предложения",
+    //         image: "/img/news/news-post-4.webp",
+    //         category: "Политика",
+    //     },
+    //     {
+    //         id: 5,
+    //         title: "Title",
+    //         image: "/img/news/news-post-5.webp",
+    //         category: "Наука",
+    //     },
+    //     {
+    //         id: 6,
+    //         title: "Title",
+    //         image: "/img/news/news-post-6.webp",
+    //         category: "Общество",
+    //     },
+    // ];
 
     const articles = [
         {
