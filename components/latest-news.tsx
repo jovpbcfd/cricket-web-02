@@ -1,12 +1,16 @@
+import Image from "next/image"
+
 export default function LatestNews() {
     return (
         <>
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:p-4">
                 <div className="relative md:col-span-2 relative">
-                    <img
+                    <Image
                         src="/img/news/gt-featured-post.webp"
                         alt="Featured News"
-                        className="w-full h-full object-cover rounded-md md:absolute md:inset-0 "
+                        className="w-full h-full object-cover rounded-md md:absolute md:inset-0"
+                        width={802}
+                        height={404}
                     />
                     <div className="absolute inset-0 bg-black/40 rounded-lg"></div>
 
@@ -51,10 +55,12 @@ export default function LatestNews() {
                             },
                         ].map((post, index) => (
                             <div key={index} className="flex space-x-3 items-center">
-                                <img
+                                <Image
                                     src={post.image}
                                     alt="Post"
                                     className="w-22 h-22 object-cover rounded-full"
+                                    width={88}
+                                    height={88}
                                 />
                                 <div>
                                     <span className="text-xs text-gray-500">

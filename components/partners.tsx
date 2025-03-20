@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 
 const officialPartnerLogos = [
@@ -27,7 +28,7 @@ export default function Partners() {
         let start = Date.now()
 
         function animate() {
-            let elapsed = Date.now() - start
+            const elapsed = Date.now() - start
             marquee.style.transform = `translateX(${-elapsed * 0.05}px)`
             if (elapsed * 0.05 > marquee.scrollWidth / 2) {
                 start = Date.now()
@@ -46,7 +47,7 @@ export default function Partners() {
                 style={{ willChange: 'transform' }}
             >
                 {[...officialPartnerLogos, ...officialPartnerLogos].map((logo, index) => (
-                    <img
+                    <Image
                         key={index}
                         src={`/img/${logo}`}
                         alt="logo"
