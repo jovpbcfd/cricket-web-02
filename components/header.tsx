@@ -78,7 +78,7 @@ export default function Header() {
                     </button>
                 </div>
                 {isOpen && (
-                    <nav className="md:hidden bg-[url(/bg-h&f.svg)] bg-center border-b-4 border-[#f3dc8a] shadow-md absolute w-full left-0 top-26 flex flex-col space-y-4 p-4">
+                    <nav className="md:hidden bg-[url(/bg-h&f.svg)] bg-center border-b-4 border-[#f3dc8a] shadow-md absolute w-full left-0 top-26 flex flex-col space-y-4 p-4 z-1">
                         <Link
                             href="/"
                             className="text-white hover:text-white/50"
