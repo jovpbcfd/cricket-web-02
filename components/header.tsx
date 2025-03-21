@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import Breadcrumb from './breadcrumb'
 
 function Menu() {
     return (
@@ -48,61 +49,64 @@ function Close() {
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false)
     return (
-        <header className="bg-[url(/bg-h&f.svg)] bg-center">
-            <div className="max-w-7xl mx-auto py-2 px-2 md:px-0">
-                <div className="flex items-center justify-between md:justify-normal md:gap-10">
-                    <Link href="/">
-                        <Image src="/logo.svg" height={94} width={127} alt="Logo" />
-                    </Link>
-                    <nav className="hidden md:self-end md:my-2 md:flex md:w-full md:justify-between">
-                        <div className="flex space-x-6">
-                            <Link href="/" className="text-white hover:text-white/50">
+        <>
+            <header className="bg-[url(/bg-h&f.svg)] bg-center">
+                <div className="max-w-7xl mx-auto py-2 px-2 md:px-0">
+                    <div className="flex items-center justify-between md:justify-normal md:gap-10">
+                        <Link href="/">
+                            <Image src="/logo.svg" height={94} width={127} alt="Logo" />
+                        </Link>
+                        <nav className="hidden md:self-end md:my-2 md:flex md:w-full md:justify-between">
+                            <div className="flex space-x-6">
+                                <Link href="/" className="text-white hover:text-white/50">
+                                    Home
+                                </Link>
+                                <Link href="/news" className="text-white hover:text-white/50">
+                                    News
+                                </Link>
+                                <Link href="/matches" className="text-white hover:text-white/50">
+                                    Matches
+                                </Link>
+                            </div>
+                            <div className="text-[#f3dc8a]">
+                                <button>Sign Up</button>
+                                <span className="mx-2">|</span>
+                                <button>Log In</button>
+                            </div>
+                        </nav>
+
+                        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-gray-700">
+                            {isOpen ? <Close /> : <Menu />}
+                        </button>
+                    </div>
+                    {isOpen && (
+                        <nav className="md:hidden bg-[url(/bg-h&f.svg)] bg-center border-b-4 border-[#f3dc8a] shadow-md absolute w-full left-0 top-26 flex flex-col space-y-4 p-4 z-1">
+                            <Link
+                                href="/"
+                                className="text-white hover:text-white/50"
+                                onClick={() => setIsOpen(false)}
+                            >
                                 Home
                             </Link>
-                            <Link href="/news" className="text-white hover:text-white/50">
+                            <Link
+                                href="/news"
+                                className="text-white hover:text-white/50"
+                                onClick={() => setIsOpen(false)}
+                            >
                                 News
                             </Link>
-                            <Link href="/matches" className="text-white hover:text-white/50">
+                            <Link
+                                href="/matches"
+                                className="text-white hover:text-white/50"
+                                onClick={() => setIsOpen(false)}
+                            >
                                 Matches
                             </Link>
-                        </div>
-                        <div className="text-[#f3dc8a]">
-                            <button>Sign Up</button>
-                            <span className="mx-2">|</span>
-                            <button>Log In</button>
-                        </div>
-                    </nav>
-
-                    <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-gray-700">
-                        {isOpen ? <Close /> : <Menu />}
-                    </button>
+                        </nav>
+                    )}
                 </div>
-                {isOpen && (
-                    <nav className="md:hidden bg-[url(/bg-h&f.svg)] bg-center border-b-4 border-[#f3dc8a] shadow-md absolute w-full left-0 top-26 flex flex-col space-y-4 p-4 z-1">
-                        <Link
-                            href="/"
-                            className="text-white hover:text-white/50"
-                            onClick={() => setIsOpen(false)}
-                        >
-                            Home
-                        </Link>
-                        <Link
-                            href="/news"
-                            className="text-white hover:text-white/50"
-                            onClick={() => setIsOpen(false)}
-                        >
-                            News
-                        </Link>
-                        <Link
-                            href="/matches"
-                            className="text-white hover:text-white/50"
-                            onClick={() => setIsOpen(false)}
-                        >
-                            Matches
-                        </Link>
-                    </nav>
-                )}
-            </div>
-        </header>
+            </header>
+            <Breadcrumb />
+        </>
     )
 }
