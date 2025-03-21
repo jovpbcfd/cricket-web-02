@@ -52,6 +52,8 @@ export default function Partners() {
                         src={`/img/${logo}`}
                         alt="logo"
                         className="h-12 w-auto opacity-80 filter grayscale contrast-50"
+                        width={155}
+                        height={50}
                     />
                 ))}
             </div>

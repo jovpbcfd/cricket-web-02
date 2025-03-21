@@ -26,7 +26,7 @@ export default function LatestNews() {
                 </div>
 
                 <div>
-                    <h3 className="text-lg font-bold mb-4 tracking-tight">Latest Posts</h3>
+                    <h3 className="text-lg font-bold mb-4 tracking-tight text-white">Latest Posts</h3>
                     <div className="space-y-4">
                         {[
                             {
@@ -63,11 +63,11 @@ export default function LatestNews() {
                                     height={88}
                                 />
                                 <div>
-                                    <span className="text-xs text-gray-500">
+                                    <span className="text-xs text-white">
                                         <span className="mr-2">{post.time}</span>•
                                         <span className="text-blue-500 ml-2">{post.category}</span>
                                     </span>
-                                    <p className="font-semibold text-sm">{post.title}</p>
+                                    <p className="font-semibold text-sm text-white">{post.title}</p>
                                 </div>
                             </div>
                         ))}

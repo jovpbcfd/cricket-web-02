@@ -56,7 +56,7 @@ export default function Matches() {
     return (
         <div className='grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-5'>
             {teamMatches.map((match) => (
-                <div key={match.matchNumber} className='bg-[url(/img/BACKGROUND-SAMPLE.webp)] bg-cover bg-center flex flex-row rounded-md p-4 md:px-4 md:justify-between w-full h-full md:h-[256px]'>
+                <div key={match.matchNumber} className='bg-[url(/img/BACKGROUND-SAMPLE.webp)] shadow-sm shadow-[#FFFBB9]/50 bg-cover bg-center flex flex-row rounded-md p-4 md:px-4 md:justify-between w-full h-full md:h-[256px]'>
                     <div className='self-center flex flex-col items-center gap-2 md:gap-6 md:ml-10'>
                         <div className='flex items-center justify-center gap-3 text-white'>
                             <div>
