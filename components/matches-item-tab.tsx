@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { teamSquad } from '@/data/matches'
+import { teamSquad } from "@/data/matches";
 import SquadDetails from "./squad";
 
 type Matches = {

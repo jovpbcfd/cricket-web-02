@@ -5,6 +5,7 @@ import LatestNews from '@/components/latest-news'
 import Standings from '@/components/standings'
 import Matches from '@/components/matches'
 import AboutUs from '@/components/about-us'
+import Players from '@/components/players'
 
 
 export default function Home() {
@@ -57,57 +58,18 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-1 md:py-5">
+        <div className="max-w-7xl mx-auto px-4 my-10">
+          <h2 className="font-bold text-2xl mb-4 uppercase tracking-tight text-center">Players</h2>
+          <Players />
+        </div>
+      </section >
+
       <section className="bg-[url(/bg-h&f.svg)] bg-center border-y-4 border-[#f3dc8a] py-1 md:py-5">
         <div className="max-w-7xl mx-auto px-4 my-10">
           <h2 className="font-bold text-2xl text-white mb-4 uppercase tracking-tight">Latest News</h2>
           <LatestNews />
         </div>
-      </section>
-
-      <section className="max-w-7xl mx-auto">
-        {/* <h2 className="font-bold text-2xl mb-4">Players</h2> */}
-        {/* <div className="grid gap-4 w-full max-w-7xl mx-auto grid-cols-1 md:grid-cols-3">
-          <div className="flex border p-4 w-[600px] h-[300px]">
-            <div className="flex-shrink-0 w-[40%] h-full border">
-              <Image
-                src="/img/players/player-one.webp"
-                className="h-full w-full object-contain"
-                width={349}
-                height={280}
-                alt="Player Image"
-              />
-            </div>
-
-            <div className="flex flex-col justify-center pl-4 w-[60%] self-end">
-              <span className="text-lg font-handwritten">Captain</span>
-              <h3 className="font-bold text-2xl font-handwritten">Player Name</h3>
-
-              <div className="flex items-center text-lg font-handwritten mt-4">
-                <div className="text-center mx-2">
-                  <p>Matches</p>
-                  <p className="font-bold text-xl">12</p>
-                </div>
-                <span className="text-2xl mx-1">/</span>
-                <div className="text-center mx-2">
-                  <p>Runs</p>
-                  <p className="font-bold text-xl">12</p>
-                </div>
-                <span className="text-2xl mx-1">/</span>
-                <div className="text-center mx-2">
-                  <p>Highscore</p>
-                  <p className="font-bold text-xl">12</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex border p-4 w-[600px] h-[300px]"></div>
-          <div className="bg-gray-200 h-24 border border-black"></div>
-
-          <div className="col-span-3 flex justify-center gap-4">
-            <div className="bg-gray-200 h-24 w-1/4 border border-black"></div>
-            <div className="bg-gray-200 h-24 w-1/4 border border-black"></div>
-          </div>
-        </div> */}
       </section>
 
       <section className="py-1 md:py-5">

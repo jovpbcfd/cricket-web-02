@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { liveMatches } from "@/data/matches"
+import { liveMatches } from "@/data/matches";
 
 export default function Breadcrumb() {
     const pathname = usePathname();
